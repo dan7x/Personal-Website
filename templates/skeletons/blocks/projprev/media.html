@@ -1,0 +1,145 @@
+{% if isImg %}
+
+{% if captionheaderexist %}
+<!-- image bunch with at least one header/caption -->
+
+<!-- captioned -->
+<section class="u-black u-clearfix u-section-3" id="sec-40a7">
+  <div class="u-clearfix u-sheet u-valign-middle 
+      {% if config != 's' %}
+      u-sheet-1 
+      {% endif %} forcepad" {{anim}}>
+    <div class="u-expanded-width u-list
+        {% if config != 's' %}
+        u-list-1
+        {% endif %} roundborder">
+      <div class="
+          {% if config != 's' %}
+          u-repeater
+          {% endif %}
+            u-repeater-1 div-sizeforce">
+        <div class="u-container-style u-list-item u-repeater-item div-sizeforce">
+          <div class="u-container-layout u-similar-container u-container-layout-1 div-sizeforce">
+            <center>
+              <img alt="" class="{% if config != 's' %} 
+                  forcecenter
+                  {% endif %} u-image u-image-default u-image-1
+                  {% if config == 's' %}
+                  singleimage
+                  {% endif %} imghfix u-expanded-width
+                  data-image-width=" 2000" data-image-height="1333" src={{url_for('static', filename=projfile +
+                media[0])}}>
+            </center>
+            <h3 class="u-custom-font u-font-courier-new u-text u-text-1">
+              {% if header[0] is not none %}
+              {{ header[0] }}
+              {% endif %}
+            </h3>
+            {% if caption[0] is not none and header[0] is not none %}
+            <div class="u-border-1 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-1"></div>
+            {% endif %}
+            <p class="u-custom-font u-font-courier-new u-text u-text-2">
+              {% if caption[0] is not none %}
+              {{ caption[0] }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+        {% if config != 's' %}
+        <div class="u-container-style u-list-item u-repeater-item div-sizeforce">
+          <div class="u-container-layout u-similar-container u-container-layout-2 div-sizeforce">
+            <center><img alt="" class="forcecenter u-image u-image-default u-image-2 imghfix u-expanded-width"
+                data-image-width="2000" data-image-height="1333" src={{url_for('static', filename=projfile +
+                media[1])}}></center>
+
+            <h3 class="u-custom-font u-font-courier-new u-text u-text-3">
+              {% if header[1] is not none %}
+              {{ header[1] }}
+              {% endif %}
+            </h3>
+            {% if caption[1] is not none and header[1] is not none %}
+            <div class="u-border-1 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-2"></div>
+            {% endif %}
+            <p class="u-custom-font u-font-courier-new u-text u-text-4">
+              {% if caption[1] is not none %}
+              {{ caption[1] }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% else %}
+<!-- plain image bunch -->
+<section class="u-align-center u-black u-clearfix u-section-4" id="sec-19bf">
+  <div class="u-clearfix u-sheet u-valign-middle u-sheet-1" {{anim}}>
+    {% if config != 's' %}
+    <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
+      <div class="u-gallery-inner u-gallery-inner-1">
+        <div class="u-effect-fade u-gallery-item">
+          <div class="u-back-slide">
+            <img class="u-back-image u-expanded " src="{{url_for('static', filename = projfile + media[0])}}">
+          </div>
+          <div class="u-over-slide u-shading u-over-slide-1">
+            <h3 class="u-gallery-heading"></h3>
+            <p class="u-gallery-text"></p>
+          </div>
+        </div>
+
+
+        <div class="u-effect-fade u-gallery-item">
+          <div class="u-back-slide">
+            <img class="u-back-image u-expanded " src="{{url_for('static', filename = projfile + media[1])}}">
+          </div>
+          <div class="u-over-slide u-shading u-over-slide-2">
+            <h3 class="u-gallery-heading"></h3>
+            <p class="u-gallery-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div class="u-expanded u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
+      <div class="u-gallery-inner u-gallery-inner-1 u-expanded-width"  style="grid-template-columns: repeat(1, auto);">
+        <div class="u-effect-fade u-gallery-item">
+          <div class="u-back-slide">
+            <img class="u-back-image u-expanded " src="{{url_for('static', filename = projfile + media[0])}}">
+          </div>
+          <div class="u-over-slide u-shading u-over-slide-1">
+            <h3 class="u-gallery-heading"></h3>
+            <p class="u-gallery-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% endif %}
+
+{% else %}
+<!-- single video -->
+<section class="u-align-center u-black u-clearfix" id="sec-19bf">
+  <div class="u-clearfix u-sheet u-valign-middle u-sheet-1" {{anim}}>
+    <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover">
+      <center>
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/{{media}}" 
+        frameborder="0" allowfullscreen>
+        </iframe>
+        <p class="u-custom-font u-font-courier-new u-text u-text-4 fontsize">
+          {% if caption[0] is not none %}
+          {{ caption[0] }}
+          {% endif %}
+        </p>
+      </center>
+    </div>
+  </div>
+</section>
+
+{% endif %}

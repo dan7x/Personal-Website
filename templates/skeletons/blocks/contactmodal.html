@@ -1,0 +1,65 @@
+<!-- The Modal -->
+<div id="c-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content" >
+      <h2 class = "mod-text contact-head" >Contact</h2>
+      <hr>
+      <p class = "mod-text">Reach out to me at any of the following:</p>
+      <center>
+      <table>
+        <tr>
+          <td class = "mod-text platz">Email</td>
+              <td class = "mod-text cinfo c-linkt"> 
+                <a href="mailto:ddxiao1357@gmail.com" class = "c-linkt">ddxiao1357@gmail.com</a>
+              </td>
+        </tr>
+        <tr>
+          <td class = "mod-text platz">Instagram</td>
+          <td class = "mod-text cinfo c-linkt"> 
+            <a href="https://www.instagram.com/d7xiao/" target="_blank" rel="noopener noreferrer" class = "c-linkt">@d7xiao</a>
+          </td>
+        </tr>
+        <tr>
+          <td class = "mod-text platz">Discord</td>
+          <td class = "mod-text cinfo c-linkt"> 
+            <a href="https://discordapp.com/users/503557198920548365/" target="_blank" rel="noopener noreferrer" class = "c-linkt">sevenpapi#7862</a>
+          </td>
+        </tr>
+        </table>
+        <br>
+        <button class="mod-text close" id="cinfo-popup">
+          Close
+        </button>
+      </center>
+    </div>
+  
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById("c-modal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("cinfo-popup");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    $(modal).fadeIn('slow');
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    $(modal).fadeOut('slow');
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      $(modal).fadeOut('slow');
+    }
+  }
+  </script>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+
+  <head>
+    {% include 'skeletons/blocks/head.html' %}
+    <style>
+      .fontsize{
+        font-size: 100%;
+      }
+      .roundborder{ 
+        border-style: solid;
+        border-color: white;
+        border-radius: 25px;
+        border-width: 2px;
+      }
+      .videlem{
+        border-style: none;
+        resize: both;
+        width:80vw;
+        max-width: 600px;
+        max-height: 400px;
+        resize: both;
+        overflow: auto;
+      }
+      .imghfix{
+        max-height: 500px;
+        max-width: 600px;
+      }
+      .forcepad{
+        padding: 0px 0px 20px 0px;
+      }
+      img{
+        border-style: none;
+        border-radius: 25px;
+      }
+      .forcecenter{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+      }
+      .singleimage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+      }
+      .hyplink{
+        color:white;
+    }
+
+      .hyplink:hover{
+          color:white;
+      }
+    </style>
+  </head>
+
+<body class="u-body">
+
+  {% include 'skeletons/blocks/header.html' %}
+
+  {{main_content|safe}}
+
+  {% include 'skeletons/blocks/footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<project version="1.0">
+
+<meta>
+    <rank>1</rank>
+    <title>Tetris Game made with Visual Basic</title>
+    <desc>Wrote Tetris as my final project for Grade 10 computer science using Visual Basic.</desc>
+    <thumb>thumb.png</thumb>
+</meta>
+
+<title author="Daniel Xiao" shortdate="12/2018">Tetris Game for Grade 10 Computer Science Final Project</title>
+<subtitle>Overview</subtitle>
+<text>I really liked Tetris, which is why I chose to make this game for this project.</text>
+<text>Here is some gameplay:</text>
+<img cfg="p" i="tetris1.gif|tetris2.gif">
+</img>
+
+<text>The (very messy) code for this project can be found !nb href="https://github.com/dan7x/ICS2O-Tetris"!rb here!cl.
+    I did the best I could to mimic the gamemodes of Tetris Friends (RIP). To implment the piece rotations,
+    I basically hardcoded where each block should move.
+</text>
+
+<text>The games I made !lb href="/projects/amongusrunner"!rb later on !cl are way better, and are at least somewhat original.</text>
+
+<subtitle>Projects Specifications</subtitle>
+<text>
+    Programming language used: Visual Basic !br
+    Image Manipulation: !nb href="https://www.getpaint.net/"!rb Paint.net !cl !br
+</text>
+
+
+</project>

@@ -1,0 +1,35 @@
+<div class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-1"
+    data-animation-name="zoomIn" 
+    data-animation-duration="1000" 
+    data-animation-delay="0"
+    data-animation-direction=""
+    style="margin:0px;">
+    <div class="u-container-layout u-valign-top-sm u-valign-top-xs u-container-layout-1">
+        <img src="{{url_for('static', filename= assetpath + thumb)}}" alt="" class="u-image u-image-round u-radius-40 u-image-1" data-image-width="1280"
+            data-image-height="853">
+        <div
+            class="u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xs u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-2">
+            <div class="u-container-layout u-valign-top u-container-layout-2"
+            style="padding:5px;">
+                <h4 class="u-custom-font u-font-courier-new u-text" style="font-size: 30; text-decoration: underline;">
+                    {{title}}
+                </h4>
+                <p class="u-custom-font u-font-courier-new u-text u-text-2">
+                    {{desc}}
+                </p>
+                <a href="/projects/{{filename}}"
+                    class="u-btn u-button-style u-custom-font u-font-courier-new u-none u-text-grey-40 u-text-hover-palette-5-dark-2 u-btn-1">Read
+                    More&nbsp;<span class="u-icon"><svg class="u-svg-content" viewBox="0 -32 426.66667 426"
+                            style="width: 1em; height: 1em;">
+                            <path
+                                d="m213.332031 181.667969c0 4.265625-1.277343 8.53125-3.625 11.730469l-106.667969 160c-3.839843 5.761718-10.238281 9.601562-17.707031 9.601562h-64c-11.730469 0-21.332031-9.601562-21.332031-21.332031 0-4.269531 1.28125-8.535157 3.625-11.734375l98.773438-148.265625-98.773438-148.269531c-2.34375-3.199219-3.625-7.464844-3.625-11.730469 0-11.734375 9.601562-21.335938 21.332031-21.335938h64c7.46875 0 13.867188 3.839844 17.707031 9.601563l106.667969 160c2.347657 3.199218 3.625 7.464844 3.625 11.734375zm0 0">
+                            </path>
+                            <path
+                                d="m426.667969 181.667969c0 4.265625-1.28125 8.53125-3.628907 11.730469l-106.664062 160c-3.839844 5.761718-10.242188 9.601562-17.707031 9.601562h-64c-11.734375 0-21.335938-9.601562-21.335938-21.332031 0-4.269531 1.28125-8.535157 3.628907-11.734375l98.773437-148.265625-98.773437-148.269531c-2.347657-3.199219-3.628907-7.464844-3.628907-11.730469 0-11.734375 9.601563-21.335938 21.335938-21.335938h64c7.464843 0 13.867187 3.839844 17.707031 9.601563l106.664062 160c2.347657 3.199218 3.628907 7.464844 3.628907 11.734375zm0 0">
+                            </path>
+                        </svg><img></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

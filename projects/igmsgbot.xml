@@ -1,0 +1,65 @@
+<project version="1.0">
+
+<meta>
+    <rank>6</rank>
+    <title>Instagram Message Bot</title>
+    <desc>A discord-style bot with a highly customizable command and auto-message framework for Instagram
+         group chats/DM's.
+    </desc>
+    <thumb>thumb.png</thumb>
+</meta>
+
+<title author="Daniel Xiao" date="April 2020 (Updated August 2021)">Instagram Messaging Bot for Group Chats and DM's
+</title>
+<subtitle>Overview</subtitle>
+<text>
+    I took on this project to learn web scraping and automation. It ended up being pretty cool because I had to 
+    make almost everything from scratch (I couldn't find any tools that existed that could both read
+    and write Instagram messages).
+</text>
+<text>Here are some illustrations of its functionality:</text>
+<img cfg="p" i="thumb.png|hlp.png">
+</img>
+<subtitle>Ease of Use</subtitle>
+<text>The powerful "!nbhref="https://github.com/dan7x/ig-bot/tree/main/core"!rbcore!cl" package (built with !nb href="https://www.selenium.dev/"!rb Selenium!cl) contributes to the behind-the-scenes functionality of the bot (for instance,
+    logging in to Instagram, reading in and parsing messages, actually sending messages, etc.). This allowed for
+    really, really easy and flexible creation of bot functionality. For example, the code below (left) is the only
+    code I need to write functionality that reads in the command "!test [args]", and perhaps, does something with [args].
+    The image on the right would be the result of this 15-line block of code in !nb href="https://github.com/dan7x/ig-bot/blob/main/commands.py" !rb commands.py!cl:
+</text>
+<img cfg="p" i="testcod.png|testmg.png">
+</img>
+<subtitle>Periodic Messaging Functionality</subtitle>
+<text>It is also possible to create periodic messages that send at periodic intervals, or at a specific date and time. The code on the 
+    left sends a message every hour starting at a specified time, and the code on the right sends a message every day at 7:00AM.
+    Given that hosting locations (and the locations of chat members) may vary greatly, the periodic messaging system is complete
+    with multi-timezone support, which can be edited in the !nb href="https://github.com/dan7x/ig-bot/blob/main/config.py"!rb config.py !cl 
+    file. The code below in the left image will create the functionality shown in the right image (it's only 12 lines!):
+</text>
+<img cfg="p" i="periodcode.png|periodic.png">
+</img>
+<subtitle>Other Features</subtitle>
+<text>The above code shows how easy it is to say "starting from August 4th, 2020 at 7pm, send a message every minute". There is also
+    support for "limited-time" commands that can only be run after a certain amount of time has passed, 
+    a simple framework for building custom portable plugins, 
+    simple ways to customize built-in functions
+    (such as "!help" and "!everyone"), and several other functionalities. It is also possible to change settings in the !nb href="https://github.com/dan7x/ig-bot/blob/main/config.py" !rb config.py!cl 
+    file, such as messages that can be sent at startup, login information, and more.
+</text>
+<text>Update: as of January 2022, the bot may not fully work (though I'll probably update it at some point). Maybe Instagram changed
+    the way they authenticated users, so it's no longer able to log in while being hosted remotely.
+</text>
+<subtitle>Projects Specifications</subtitle>
+<text>
+Programming language used: Python, HTML !br
+Technologies:
+!nb href="https://www.selenium.dev/"!rb Selenium !cl !br
+Python Packages:
+ !nb href="https://pypi.org/project/beautifulsoup4/"!rb BeautifulSoup4!cl,
+ !nb href="https://pypi.org/project/colorama/"!rb Colorama (for CLI)!cl,
+ !nb href="https://pypi.org/project/emoji/"!rb Emoji!cl,
+ !nb href="https://pypi.org/project/pytz/"!rb PyTZ!cl,
+ !nb href="https://openweathermap.org/api"!rb OpenWeather API!cl
+</text>
+
+</project>

@@ -1,0 +1,92 @@
+<project version="1.0">
+
+<meta>
+    <rank>5</rank>
+    <title>Personal Portfolio Website</title>
+    <desc>
+        You can see how this website works behind the scenes. I made this site as a
+        convenient place to showcase my projects and notes.
+    </desc>
+    <thumb>thumb.png</thumb>
+</meta>
+
+<title author="Daniel Xiao" shortdate="01/2022">Personal Portfolio Website and Template Generator</title>
+
+<subtitle>Overview</subtitle>
+<text>
+    The guiding principle behind this website was that I wanted a straightforward, modular design that
+    I can easily customize. I also built the backend of this site "manually" (as opposed to using a WYSIWYG editor like Wix),
+    to brush up on coding skills before hunting for co-op jobs.
+</text>
+
+<img cfg="s" i="thumb.png"></img>
+
+<subtitle>Front-end Design</subtitle>
+<text>The front-end of this website was made using the click-and-drag editor !nb href="https://nicepage.com/html5-template" 
+    !rb Nicepage!cl. It was then manually tweaked to further customize it to the purpose of this website. </text>
+
+<subtitle>Backend</subtitle>
+<text>I opted to use !nb href="https://flask.palletsprojects.com/en/2.0.x/" !rb Flask !cl to build the backend because I wanted to make my site a lot more 
+    personalized than, say, a generic Wix site, and I also wanted to brush up on my coding skills. Additionally,
+    to make a minimalistic website, I didn't really need the vast majority of out-of-the-box functionality (i.e., content managment system, user management, etc.)
+    features offered by something like Django, and I also wanted full control and flexibility. The site was deployed with
+    !nb href="https://aws.amazon.com/elasticbeanstalk/"!rb AWS Elastic Beanstalk!cl.
+</text>
+<subtitle>XML Parser</subtitle>
+<text>
+    To make it as easy as possible for me to add new new pages (i.e., new projects, new sets of notes, etc.), while simultaneously
+    maintaining the ability to make each one somewhat unique and customizable, I built a lightweight XML parser. If I wanted to generate a
+    new project, I simply execute the "python newproject.py [projectname]" command in the root directory, which automatically generates
+    the required XML templates and asset folders. After this, all that's left to do is to fill in the blanks. 
+</text>
+<text>Here is how the XML file
+    might look like ("thumb.png" is shown on the right):</text>
+
+<img cfg="s" i="xmlcode.png"></img>
+
+<text>
+    The XML parser consumes all of the markup files, and produces each respective webpage with the !lb href="https://jinja.palletsprojects.com/en/3.0.x/" !rb Jinja2!cl templating 
+    engine. This makes it easy to add new template-based pages really fast, while still maintaining flexibility. The markup files will be passed into the parser, which will generate a webpage and insert
+    the project into the project list based on the <![CDATA[ &lt;meta&gt;]]> tag contents. The rest of the file deals with the webpage content
+    without having to work with janky HTML and CSS elements.
+</text>
+<text>The output of the above XML file is shown below. The left image shows the result of the <![CDATA[ &lt;meta&gt;]]> tag  
+    on the "/projects" page (left), and the right image shows the result on the webpage itself (right):</text>
+
+<img cfg="p" i="projprev.png|eprojprev.png"></img>
+
+<subtitle>Markup</subtitle>
+
+<text>The current markup syntax in place sucks. For example, if I wanted to insert a !nb href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+    !rb hyperlink !cl into some text, the syntax is the awfully unwieldy "!\nb href=!nb href=https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+    !rb "https://www.youtube.com/watch?v=dQw4w9WgXcQ !cl !\rb hyperlink !\cl". This is because using the CDATA tag every time I wanted to embed HTML would have become very annoying,
+    so I just made my own markup system that addresses things on an as-needed basis (i.e., links, linebreaks, etc.).
+</text>
+
+<text>I made sure to run a check
+    for the version of the website each XML template was made for, to ensure backward compatibility if I ever deside to change up
+    the markup system, so that pages using the older versions (such as this one) don't break.</text>
+
+<text>Additionally, the XML parser hasn't been thoroughly tested, so it still could be a little buggy.</text>
+
+<subtitle>Possible Updates</subtitle>
+<text>
+    - More customization options !br
+    - More user-friendly markup system !br
+    - Make some of the HTML elements less janky to work with !br
+    - Add some course notes !br
+    - Design improvments
+</text>
+
+
+<subtitle>Projects Specifications</subtitle>
+<text>
+Programming language used: Python !br
+Front-end: 
+!nb href="https://jmonkeyengine.org/"!rb Nicepage!cl, HTML, CSS, XML!br
+Back-end: !nb href="https://flask.palletsprojects.com/en/2.0.x/"!rb Flask!cl
+Deployment: !nb href="https://aws.amazon.com/elasticbeanstalk/"!rb AWS Elastic Beanstalk!cl
+</text>
+
+
+</project>

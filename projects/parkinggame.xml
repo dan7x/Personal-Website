@@ -1,0 +1,39 @@
+<project version="1.0">
+
+<meta>
+    <rank>3</rank>
+    <title>Parking Game made with Java</title>
+    <desc>A parking simulator inspired by Parking Mania, complete with an automatic gear shifter.</desc>
+    <thumb>thumb.png</thumb>
+</meta>
+
+<title author="Daniel Xiao" shortdate="12/2019">Parking Game Culminating Project for ICS3U (Grade 11 Computer Science)</title>
+
+<subtitle>Overview</subtitle>
+<text>Here's a game I made in grade 11 as my final ICS3U project.</text>
+
+<vid v="demo.mkv">
+    <cap>Gameplay Demo</cap>
+</vid>
+
+<text>Since it was made for a school project, the aim was not to make the game fun and addictive to play, but rather
+    to show that I understood all the programming concepts. For this reason, I focused on a breadth of functionality
+    (i.e., providing realism with gear shifts, custom map editior, settings variety, etc.) as opposed to making the 
+    game playable for a general audience.
+</text>
+
+<img cfg="p" i="mapedit.png|settings.png">
+</img>
+<text>The original idea was to make a racing game, but I ended up running out of time,
+    so I scrapped the minimap that I made for the racing game and turned it into
+    a !nb href="https://www.coolmathgames.com/0-parkingmania"!rb Parking-Mania !cl copy by adding
+    in a few hitboxes. My !lb href="/projects/amongusrunner"!rb grade 12 project !cl was magnitudes
+    better, with 3D graphics and actual fun playability.</text>
+
+<subtitle>Project Specifications</subtitle>
+<text>
+Programming language used: Java !br
+Image Manipulation:  !nb href="https://www.getpaint.net/"!rb Paint.net !cl !br
+Music (for the edited demo): !nb href="https://www.youtube.com/channel/UCd5fICnuBVkvc2oa1bbZqGA"!rb Moon Kite Beats !cl !br
+</text>
+</project>

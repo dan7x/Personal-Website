@@ -1,0 +1,31 @@
+<project version="1.0">
+
+<meta>
+    <rank>2</rank>
+    <title>TeachAssist to Excel Scraper Tool</title>
+    <desc>
+        A tool that I developed to automatically scrape my grades in all my courses from my school board's
+        grades website.
+    </desc>
+    <thumb>thumb.png</thumb>
+</meta>
+
+<title author="Daniel Xiao" shortdate="02/2019">TeachAssist Scraper Tool for High-Precision Grade Calculation</title>
+
+<subtitle>Overview</subtitle>
+<text>
+    In short, I made script that pulls my grades from the TeachAssist website and plops everything into a spreadsheet.
+    This made it really easy for me to calculate my grades whenever I wanted.
+</text>
+<img cfg="p" i="thumb.png|2.png"></img>
+<text>I'm no longer a YRDSB student, but the script worked as of June 2021. If they updated the page, it may not work anymore.
+    The code can be found !lb href="https://github.com/dan7x/ExcelTA" !rb here!cl if you're interested.
+</text>
+
+<subtitle>Project Specifications</subtitle>
+<text>
+Programming language used: Python !br
+Technologies: Microsoft Excel, !lb href="https://pypi.org/project/openpyxl/" !rb openpyxl!cl !br
+</text>
+
+</project>

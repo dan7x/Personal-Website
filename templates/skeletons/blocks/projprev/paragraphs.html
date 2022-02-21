@@ -1,0 +1,28 @@
+<section class="u-align-center u-black u-clearfix u-section-5" id="sec-c172">
+  <div class="u-clearfix u-sheet u-valign-middle">
+    <div class="u-list">
+      <div class="u-repeater u-repeater-1" {{ANIM}}>
+        {% for block in block_content %}
+        {% if block[0] is not none or block[1] is not none  %}
+        <div class="u-align-left u-container-style u-list-item u-repeater-item u-shape-rectangle u-list-item-{{loop.index0 + 1}}"
+          {{ANIM}}>
+          <div class="u-container-layout u-similar-container u-container-layout-{{loop.index0 + 1}}">
+            {% if block[0] is not none %}
+            <h4 class="u-custom-font u-font-courier-new u-text u-text-default u-text-{{loop.index0 * 2 + 1}}">
+              {{ block[0]|safe }}
+            </h4>
+             {% endif %}  
+             {% if block[1] is not none %}
+             <p class="u-custom-font u-font-courier-new u-text u-text-{{loop.index0 *2 + 2}}">
+              {{ block[1]|safe }}
+            </p>
+             {% endif %}  
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        
+      </div>
+    </div>
+  </div>
+</section>

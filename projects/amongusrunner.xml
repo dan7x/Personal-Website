@@ -1,0 +1,45 @@
+<project>
+
+<meta>
+    <rank>7</rank>
+    <title>Endless 3D Platformer Game</title>
+    <desc>An endless scrolling 3D game inspired by "Temple-Run", with game assets and 
+        graphics based on the hit 2018 game "Among Us".
+    </desc>
+    <thumb>thumb.png</thumb>
+</meta>
+
+<title author="Daniel Xiao" shortdate="06/2021">Endless Scrolling 3D Platformer Game made in JMonkeyEngine</title>
+<subtitle>Overview</subtitle>
+<text>My grade 12 final computer science project was to make a game in Java. To make it extra
+     cool, I made it in 3D. Here is some gameplay:
+</text>
+<vid v="demo.mkv">
+    <cap>Gameplay Demo</cap>
+</vid>
+
+<text>The (very messy) code for this project can be found !nb href="https://github.com/dan7x/ICS4U-Red-Astro-Man-Game"!rb here!cl. The mechanics are similar to Temple Run, where the player needs to avoid obstacles on an endless scrolling platform.</text>
+<subtitle>3D Models</subtitle>
+<text>I used a mix of my own 3D models and ones that I found online. 
+    You can find the models !nb href="https://github.com/dan7x/ICS4U-Red-Astro-Man-Game/blob/main/README.md"!rb here!cl.
+    The models I made myself were created in !nb href="https://www.blender.org/"!rbBlender!cl.
+</text>
+
+<img cfg="p" i="blendpage.png|blendp2.png">
+</img>
+
+<subtitle>Memory Diagram</subtitle>
+<text>Here is the memory diagram for the program that attempts to explain the code (click to expand image):</text>
+<img cfg="s" i="memdiag.png">
+</img>
+
+<subtitle>Projects Specifications</subtitle>
+<text>
+Programming language used: Java !br
+Game Engine: !nb href="https://jmonkeyengine.org/"!rb JMonkeyEngine!cl !br
+3D Modeling Tools:  !nb href="https://www.blender.org/"!rb Blender!cl,
+ !nb href="http://www.crazybump.com"!rb CrazyBump !cl (for some texture bumpmaps) !br
+Music mixing: !nb href="https://www.audacityteam.org/"!rb Audacity !cl !br
+</text>
+
+</project>
